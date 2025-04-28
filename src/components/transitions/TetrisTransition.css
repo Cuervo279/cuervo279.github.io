@@ -1,0 +1,107 @@
+.tetris-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.5s;
+}
+
+.content.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tetris-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.tetris-block {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background: #4CAF50;
+  opacity: 0;
+  animation: tetris-fall 2s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes tetris-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+
+.sweep-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.bars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  flex-direction: column; /* Cada barra é uma linha */
+}
+
+.bar {
+  width: 100%;
+  height: 16.666%; /* 6 barras */
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left; /* Vai ser mudado via JS se precisar */
+  opacity: 0;
+}
+
+/* Expansão de barra */
+@keyframes expand {
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Conteúdo */
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+  z-index: 1;
+  opacity: 1;
+}
+
+.content.hidden {
+  opacity: 0;
+}

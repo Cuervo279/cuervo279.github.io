@@ -1,0 +1,228 @@
+:root[data-theme=light] {
+        /* Tema claro */
+        --portfolio-elements-borderColor: #1717171a;
+        --portfolio-elements-borderColorActive: rgb(20,136,252);
+        --portfolio-elements-bg-depth-1: rgb(255,255,255);
+        --portfolio-elements-bg-depth-2: rgb(250,250,250);
+        --portfolio-elements-bg-depth-3: rgb(229,229,229);
+        --portfolio-elements-bg-depth-4: #1717170d;
+        --portfolio-elements-bg-overlay: #ffffffb3;
+        --portfolio-elements-welcome-shape-fill: #17171733;
+        --portfolio-elements-welcome-shadow-color-1: #17171712;
+        --portfolio-elements-welcome-shadow-color-2: #17171733;
+        --portfolio-elements-textSelection-background: rgb(20,136,252);
+        --portfolio-elements-textSelection-text: rgb(245,245,245);
+        --portfolio-elements-textPrimary: rgb(10,10,10);
+        --portfolio-elements-textSecondary: rgb(82,82,82);
+        --portfolio-elements-textTertiary: rgb(115,115,115);
+        --portfolio-elements-link: rgb(20,136,252);
+        --portfolio-elements-linkHover: rgb(43,166,255);
+        --portfolio-elements-code-background: rgb(245,245,245);
+        --portfolio-elements-code-text: rgb(10,10,10);
+        --portfolio-elements-button-primary-background: rgb(20,136,252);
+        --portfolio-elements-button-primary-backgroundHover: rgb(13,111,232);
+        --portfolio-elements-button-primary-text: rgb(255,255,255);
+        --portfolio-elements-button-primaryLight-background: #2ba6ff1a;
+        --portfolio-elements-button-primaryLight-backgroundHover: #2ba6ff33;
+        --portfolio-elements-button-primaryLight-text: rgb(20,136,252);
+        --portfolio-elements-button-secondary-background: #1717170d;
+        --portfolio-elements-button-secondary-backgroundHover: #1717171a;
+        --portfolio-elements-button-secondary-text: rgb(10,10,10);
+        --portfolio-elements-button-danger-background: #ef44441a;
+        --portfolio-elements-button-danger-backgroundHover: #ef444433;
+        --portfolio-elements-button-danger-text: rgb(239,68,68);
+        --portfolio-elements-button-warn-background: #f790091a;
+        --portfolio-elements-button-warn-backgroundHover: #f7900933;
+        --portfolio-elements-button-warn-text: rgb(220,104,3);
+        --portfolio-elements-button-supabase-background: rgb(12,143,95);
+        --portfolio-elements-button-supabase-backgroundHover: rgb(24,177,117);
+        --portfolio-elements-item-outlineActive: rgb(20,136,252);
+        --portfolio-elements-item-contentDefault: #17171780;
+        --portfolio-elements-item-contentActive: rgb(10,10,10);
+        --portfolio-elements-item-contentAccent: rgb(13,111,232);
+        --portfolio-elements-item-contentDanger: rgb(239,68,68);
+        --portfolio-elements-item-contentWarn: rgb(247,144,9);
+        --portfolio-elements-item-backgroundDefault: rgba(0, 0, 0, 0);
+        --portfolio-elements-item-backgroundActive: #1717170d;
+        --portfolio-elements-item-backgroundAccent: #2ba6ff1a;
+        --portfolio-elements-item-backgroundDanger: #ef44441a;
+        --portfolio-elements-item-backgroundWarn: #f790091a;
+        --portfolio-elements-loader-background: #1717171a;
+        --portfolio-elements-loader-progress: rgb(43,166,255);
+        --portfolio-elements-artifacts-background: rgb(255,255,255);
+        --portfolio-elements-artifacts-backgroundHover: #17171705;
+        --portfolio-elements-artifacts-borderColor: var(--portfolio-elements-borderColor);
+        --portfolio-elements-artifacts-inlineCode-background: rgb(245,245,245);
+        --portfolio-elements-artifacts-inlineCode-text: var(--portfolio-elements-textPrimary);
+        --portfolio-elements-actions-background: rgb(255,255,255);
+        --portfolio-elements-actions-code-background: rgb(250,250,250);
+}
+ 
+
+:root[data-theme=dark] {
+                    /* Tema escuro */
+        --portfolio-elements-borderColor: #ffffff33;
+        --portfolio-elements-borderColorActive: rgb(20,136,252);
+        --portfolio-elements-bg-depth-1: #171717;
+        --portfolio-elements-bg-depth-2: #252525;
+        --portfolio-elements-bg-depth-3: #333333;
+        --portfolio-elements-bg-depth-4: #444444;
+        --portfolio-elements-bg-overlay: #00000080;
+        --portfolio-elements-welcome-shape-fill: #17171799;
+        --portfolio-elements-welcome-shadow-color-1: #17171799;
+        --portfolio-elements-welcome-shadow-color-2: #171717b3;
+        --portfolio-elements-textSelection-background: rgb(20,136,252);
+        --portfolio-elements-textSelection-text: rgb(245,245,245);
+        --portfolio-elements-textPrimary: rgb(245,245,245);
+        --portfolio-elements-textSecondary: rgb(170,170,170);
+        --portfolio-elements-textTertiary: rgb(120,120,120);
+        --portfolio-elements-link: rgb(20,136,252);
+        --portfolio-elements-linkHover: rgb(43,166,255);
+        --portfolio-elements-code-background: rgb(47,47,47);
+        --portfolio-elements-code-text: rgb(245,245,245);
+        --portfolio-elements-button-primary-background: rgb(20,136,252);
+        --portfolio-elements-button-primary-backgroundHover: rgb(13,111,232);
+        --portfolio-elements-button-primary-text: rgb(255,255,255);
+        --portfolio-elements-button-primaryLight-background: #2ba6ff33;
+        --portfolio-elements-button-primaryLight-backgroundHover: #2ba6ff55;
+        --portfolio-elements-button-primaryLight-text: rgb(20,136,252);
+        --portfolio-elements-button-secondary-background: #333333;
+        --portfolio-elements-button-secondary-backgroundHover: #444444;
+        --portfolio-elements-button-secondary-text: rgb(245,245,245);
+        --portfolio-elements-button-danger-background: #ef44441a;
+        --portfolio-elements-button-danger-backgroundHover: #ef444433;
+        --portfolio-elements-button-danger-text: rgb(239,68,68);
+        --portfolio-elements-button-warn-background: #f790091a;
+        --portfolio-elements-button-warn-backgroundHover: #f7900933;
+        --portfolio-elements-button-warn-text: rgb(220,104,3);
+        --portfolio-elements-button-supabase-background: rgb(12,143,95);
+        --portfolio-elements-button-supabase-backgroundHover: rgb(24,177,117);
+        --portfolio-elements-item-outlineActive: rgb(20,136,252);
+        --portfolio-elements-item-contentDefault: #444444;
+        --portfolio-elements-item-contentActive: rgb(245,245,245);
+        --portfolio-elements-item-contentAccent: rgb(13,111,232);
+        --portfolio-elements-item-contentDanger: rgb(239,68,68);
+        --portfolio-elements-item-contentWarn: rgb(247,144,9);
+        --portfolio-elements-item-backgroundDefault: rgba(0, 0, 0, 0.6);
+        --portfolio-elements-item-backgroundActive: #171717;
+        --portfolio-elements-item-backgroundAccent: #2ba6ff1a;
+        --portfolio-elements-item-backgroundDanger: #ef44441a;
+        --portfolio-elements-item-backgroundWarn: #f790091a;
+        --portfolio-elements-loader-background: #17171780;
+        --portfolio-elements-loader-progress: rgb(43,166,255);
+        --portfolio-elements-artifacts-background: rgb(47,47,47);
+        --portfolio-elements-artifacts-backgroundHover: #333333;
+        --portfolio-elements-artifacts-borderColor: var(--portfolio-elements-borderColor);
+        --portfolio-elements-artifacts-inlineCode-background: rgb(47,47,47);
+        --portfolio-elements-artifacts-inlineCode-text: var(--portfolio-elements-textPrimary);
+        --portfolio-elements-actions-background: rgb(47,47,47);
+        --portfolio-elements-actions-code-background: rgb(52,52,52);
+}
+
+.gradient-container {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    background: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .gradient-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 15px;
+    background: linear-gradient(95deg, rgba(20, 136, 252, 0) 0%, rgba(20, 136, 252, 0.8) 50%, rgba(20, 136, 252, 0) 100%);
+    padding: 2px;
+    margin: -2px;
+  }
+
+  .content {
+    z-index: 1;
+    position: relative;
+    color: #333;
+  }
+
+/* Font Size */
+
+  .font-size-1 {
+    font-size: 16px;
+  }
+  .font-size-2 {
+    font-size: 18px;
+  }
+  .font-size-3 {
+    font-size: 20px;
+  }
+  .font-size-4 {
+    font-size: 22px;
+  }
+  .font-size-5 {
+    font-size: 24px;
+  }
+  .font-size-6 {
+    font-size: 26px;
+  }
+  .font-size-7 {
+    font-size: 28px;
+  }
+  .font-size-8 {
+    font-size: 30px;
+  }
+  .font-size-9 {
+    font-size: 32px;
+  }
+  .font-size-10 {
+    font-size: 34px;
+  }
+
+/* Flag Icon */
+
+#flag-icon {
+    width: 26.67px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 25%;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+.pop {
+    transform: scale(1.2);
+  }
+
+.flag-brasil{
+    background-image: url('../assets/Flag_Brasil.svg');
+  }
+
+.flag-eua{
+    background-image: url('../assets/Flag_United_States.svg');
+  }
+
+.navbar-theme-icon{
+  cursor: pointer;
+  display: inline-block;
+}
+
+.rotating {
+  animation: rotateIcon 0.5s ease-in-out;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(230deg);
+  }
+}

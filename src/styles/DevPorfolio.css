@@ -1,0 +1,8 @@
+body{
+    background-color: var(--portfolio-elements-bg-depth-1);
+    background-size: 40px 40px;
+    background-image:
+    linear-gradient(to right, #333333 1px, rgba(255,255,255,0) 1px),
+    linear-gradient(to bottom, #333333 1px, rgba(255, 213, 0, 0) 1px);
+    transition-duration: 0.3s;
+}
