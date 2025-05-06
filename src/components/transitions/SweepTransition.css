@@ -17,7 +17,7 @@
 .page-transition_block {
   width: 100%;
   height: 16.6667%;
-  background-color: #000000;
+  background-color: var(--portfolio-elements-item-contentActive);
   transform: translateX(0);
   animation: sweepOut 1s forwards;
 }
