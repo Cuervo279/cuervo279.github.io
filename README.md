@@ -1,1 +1,2 @@
-# cuervo279.github.io
+npm run build
+npx gh-pages -d dist

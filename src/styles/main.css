@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Press+Start+2P&family=Righteous&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+  --white: #f9fdfe;
+    --black: #000;
+    --grey: #202020;
+    --dark-grey: #1b1b1b;
+    --light-grey: #6d6d6d;
+    --light-blue: #bed5e5;
+    --red: #df401d;
+}
+
+:root[data-theme=light] {
+        /* Tema claro */
+        --portfolio-elements-borderColor: #1717171a;
+        --portfolio-elements-borderColorActive: rgb(20,136,252);
+        --portfolio-elements-bg-depth-1: rgb(255,255,255);
+        --portfolio-elements-bg-depth-2: rgb(250,250,250);
+        --portfolio-elements-bg-depth-3: rgb(229,229,229);
+        --portfolio-elements-bg-depth-4: #1717170d;
+        --portfolio-elements-bg-overlay: #ffffffb3;
+        --portfolio-elements-welcome-shape-fill: #17171733;
+        --portfolio-elements-welcome-shadow-color-1: #17171712;
+        --portfolio-elements-welcome-shadow-color-2: #17171733;
+        --portfolio-elements-textSelection-background: rgb(20,136,252);
+        --portfolio-elements-textSelection-text: rgb(245,245,245);
+        --portfolio-elements-textPrimary: rgb(10,10,10);
+        --portfolio-elements-textSecondary: rgb(82,82,82);
+        --portfolio-elements-textTertiary: rgb(115,115,115);
+        --portfolio-elements-link: rgb(20,136,252);
+        --portfolio-elements-linkHover: rgb(43,166,255);
+        --portfolio-elements-code-background: rgb(245,245,245);
+        --portfolio-elements-code-text: rgb(10,10,10);
+        --portfolio-elements-button-primary-background: rgb(20,136,252);
+        --portfolio-elements-button-primary-backgroundHover: rgb(13,111,232);
+        --portfolio-elements-button-primary-text: rgb(255,255,255);
+        --portfolio-elements-button-primaryLight-background: #2ba6ff1a;
+        --portfolio-elements-button-primaryLight-backgroundHover: #2ba6ff33;
+        --portfolio-elements-button-primaryLight-text: rgb(20,136,252);
+        --portfolio-elements-button-secondary-background: #1717170d;
+        --portfolio-elements-button-secondary-backgroundHover: #1717171a;
+        --portfolio-elements-button-secondary-text: rgb(10,10,10);
+        --portfolio-elements-button-danger-background: #ef44441a;
+        --portfolio-elements-button-danger-backgroundHover: #ef444433;
+        --portfolio-elements-button-danger-text: rgb(239,68,68);
+        --portfolio-elements-button-warn-background: #f790091a;
+        --portfolio-elements-button-warn-backgroundHover: #f7900933;
+        --portfolio-elements-button-warn-text: rgb(220,104,3);
+        --portfolio-elements-button-supabase-background: rgb(12,143,95);
+        --portfolio-elements-button-supabase-backgroundHover: rgb(24,177,117);
+        --portfolio-elements-item-outlineActive: rgb(20,136,252);
+        --portfolio-elements-item-contentDefault: #17171780;
+        --portfolio-elements-item-contentActive: rgb(10,10,10);
+        --portfolio-elements-item-contentAccent: rgb(13,111,232);
+        --portfolio-elements-item-contentDanger: rgb(239,68,68);
+        --portfolio-elements-item-contentWarn: rgb(247,144,9);
+        --portfolio-elements-item-backgroundDefault: rgba(0, 0, 0, 0);
+        --portfolio-elements-item-backgroundDefaultTransparent: rgba(31, 31, 31, 0.5);
+        --portfolio-elements-item-backgroundActive: #1717170d;
+        --portfolio-elements-item-backgroundAccent: #2ba6ff1a;
+        --portfolio-elements-item-backgroundDanger: #ef44441a;
+        --portfolio-elements-item-backgroundWarn: #f790091a;
+        --portfolio-elements-loader-background: #1717171a;
+        --portfolio-elements-loader-progress: rgb(43,166,255);
+        --portfolio-elements-artifacts-background: rgb(255,255,255);
+        --portfolio-elements-artifacts-backgroundHover: #17171705;
+        --portfolio-elements-artifacts-borderColor: var(--portfolio-elements-borderColor);
+        --portfolio-elements-artifacts-inlineCode-background: rgb(245,245,245);
+        --portfolio-elements-artifacts-inlineCode-text: var(--portfolio-elements-textPrimary);
+        --portfolio-elements-actions-background: rgb(255,255,255);
+        --portfolio-elements-actions-code-background: rgb(250,250,250);
+}
+ 
+
+:root[data-theme=dark] {
+                    /* Tema escuro */
+        --portfolio-elements-borderColor: #323232;
+        --portfolio-elements-borderColorActive: rgb(20,136,252);
+        --portfolio-elements-bg-depth-1: #171717;
+        --portfolio-elements-bg-depth-2: #252525;
+        --portfolio-elements-bg-depth-3: #333333;
+        --portfolio-elements-bg-depth-4: #444444;
+        --portfolio-elements-bg-overlay: #00000080;
+        --portfolio-elements-welcome-shape-fill: #17171799;
+        --portfolio-elements-welcome-shadow-color-1: #17171799;
+        --portfolio-elements-welcome-shadow-color-2: #171717b3;
+        --portfolio-elements-textSelection-background: rgb(20,136,252);
+        --portfolio-elements-textSelection-text: rgb(245,245,245);
+        --portfolio-elements-textPrimary: rgb(245,245,245);
+        --portfolio-elements-textSecondary: rgb(170,170,170);
+        --portfolio-elements-textTertiary: rgb(120,120,120);
+        --portfolio-elements-link: rgb(20,136,252);
+        --portfolio-elements-linkHover: rgb(43,166,255);
+        --portfolio-elements-code-background: rgb(47,47,47);
+        --portfolio-elements-code-text: rgb(245,245,245);
+        --portfolio-elements-button-primary-background: rgb(20,136,252);
+        --portfolio-elements-button-primary-backgroundHover: rgb(13,111,232);
+        --portfolio-elements-button-primary-text: rgb(255,255,255);
+        --portfolio-elements-button-primaryLight-background: #2ba6ff33;
+        --portfolio-elements-button-primaryLight-backgroundHover: #2ba6ff55;
+        --portfolio-elements-button-primaryLight-text: rgb(20,136,252);
+        --portfolio-elements-button-secondary-background: #333333;
+        --portfolio-elements-button-secondary-backgroundHover: #444444;
+        --portfolio-elements-button-secondary-text: rgb(245,245,245);
+        --portfolio-elements-button-danger-background: #ef44441a;
+        --portfolio-elements-button-danger-backgroundHover: #ef444433;
+        --portfolio-elements-button-danger-text: rgb(239,68,68);
+        --portfolio-elements-button-warn-background: #f790091a;
+        --portfolio-elements-button-warn-backgroundHover: #f7900933;
+        --portfolio-elements-button-warn-text: rgb(220,104,3);
+        --portfolio-elements-button-supabase-background: rgb(12,143,95);
+        --portfolio-elements-button-supabase-backgroundHover: rgb(24,177,117);
+        --portfolio-elements-item-outlineActive: rgb(20,136,252);
+        --portfolio-elements-item-contentDefault: #444444;
+        --portfolio-elements-item-contentActive: rgb(245,245,245);
+        --portfolio-elements-item-contentAccent: rgb(13,111,232);
+        --portfolio-elements-item-contentDanger: rgb(239,68,68);
+        --portfolio-elements-item-contentWarn: rgb(247,144,9);
+        --portfolio-elements-item-backgroundDefault: rgba(0, 0, 0);
+        --portfolio-elements-item-backgroundDefaultTransparent: rgba(0, 0, 0, 0.8);
+        --portfolio-elements-item-backgroundActive: #171717;
+        --portfolio-elements-item-backgroundAccent: #2ba6ff1a;
+        --portfolio-elements-item-backgroundDanger: #ef44441a;
+        --portfolio-elements-item-backgroundWarn: #f790091a;
+        --portfolio-elements-loader-background: #17171780;
+        --portfolio-elements-loader-progress: rgb(43,166,255);
+        --portfolio-elements-artifacts-background: rgb(47,47,47);
+        --portfolio-elements-artifacts-backgroundHover: #333333;
+        --portfolio-elements-artifacts-borderColor: var(--portfolio-elements-borderColor);
+        --portfolio-elements-artifacts-inlineCode-background: rgb(47,47,47);
+        --portfolio-elements-artifacts-inlineCode-text: var(--portfolio-elements-textPrimary);
+        --portfolio-elements-actions-background: rgb(47,47,47);
+        --portfolio-elements-actions-code-background: rgb(52,52,52);
+}
+
+* {
+  user-select: none;
+}
+
+.gradient-container {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    background: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+
+  .gradient-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 15px;
+    background: linear-gradient(95deg, rgba(20, 136, 252, 0) 0%, rgba(20, 136, 252, 0.8) 50%, rgba(20, 136, 252, 0) 100%);
+    padding: 2px;
+    margin: -2px;
+  }
+
+  .content {
+    z-index: 1;
+    position: relative;
+    color: #333;
+  }
+
+/* Font Size */
+
+  .font-size-1 {
+    font-size: 16px;
+  }
+  .font-size-2 {
+    font-size: 18px;
+  }
+  .font-size-3 {
+    font-size: 20px;
+  }
+  .font-size-4 {
+    font-size: 22px;
+  }
+  .font-size-5 {
+    font-size: 24px;
+  }
+  .font-size-6 {
+    font-size: 26px;
+  }
+  .font-size-7 {
+    font-size: 28px;
+  }
+  .font-size-8 {
+    font-size: 30px;
+  }
+  .font-size-9 {
+    font-size: 32px;
+  }
+  .font-size-10 {
+    font-size: 34px;
+  }
+  .font-size-20{
+    font-size: 40px;
+  }
+
+/* Flag Icon */
+
+#flag-icon {
+    width: 26.67px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 25%;
+    background-size: cover;
+    background-position: center center;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+.pop {
+    transform: scale(1.2);
+  }
+
+.flag-brasil{
+    background-image: url('../assets/Flag_Brasil.svg');
+  }
+
+.flag-eua{
+    background-image: url('../assets/Flag_United_States.svg');
+  }
+
+.navbar-theme-icon{
+  cursor: pointer;
+  display: inline-block;
+}
+
+.rotating {
+  animation: rotateIcon 0.5s ease-in-out;
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(230deg);
+  }
+}
+
+/* Border */
+
+.bd-1 {
+    border: 1px solid var(--portfolio-elements-borderColor);
+  }
+.bd-2 {
+    border: 2px solid var(--portfolio-elements-borderColor);
+  }
+.bd-3 {
+    border: 3px solid var(--portfolio-elements-borderColor);
+  }
+.bd-4 {
+    border: 4px solid var(--portfolio-elements-borderColor);
+  }
+.bd-5 {
+    border: 5px solid var(--portfolio-elements-borderColor);
+  }
+.bd-6 {
+    border: 6px solid var(--portfolio-elements-borderColor);
+  }
+.bd-7 {
+    border: 7px solid var(--portfolio-elements-borderColor);
+  }
+.bd-8 {
+    border: 8px solid var(--portfolio-elements-borderColor);
+  }
+.bd-9 {
+    border: 9px solid var(--portfolio-elements-borderColor);
+  }
+.bd-10 {
+    border: 10px solid var(--portfolio-elements-borderColor);
+  }
+
+.bd-radius-1 {
+    border-radius: 5px;
+  }
+.bd-radius-2 {
+    border-radius: 10px;
+  }
+.bd-radius-3 {
+    border-radius: 15px;
+  }
+.bd-radius-4 {
+    border-radius: 20px;
+  }
+.bd-radius-5 {
+    border-radius: 25px;
+  }
+.bd-radius-6 {
+    border-radius: 30px;
+  }
+.bd-radius-7 {
+    border-radius: 35px;
+  }
+.bd-radius-8 {
+    border-radius: 40px;
+  }
+.bd-radius-9 {
+    border-radius: 45px;
+  }
+.bd-radius-10 {
+    border-radius: 50px;
+  }
+
+/* Width */
+
+.wd-1 {
+    width: 10%;
+  }
+.wd-15 {
+    width: 15%;
+  }
+.wd-2 {
+    width: 20%;
+  }
+.wd-3 {
+    width: 30%;
+  }
+.wd-4 {
+    width: 40%;
+  }
+.wd-5 {
+    width: 50%;
+  }
+.wd-6 {
+    width: 60%;
+  }
+.wd-7 {
+    width: 70%;
+  }
+.wd-8 {
+    width: 80%;
+  }
+.wd-9 {
+    width: 90%;
+  }
+.wd-10 {
+    width: 100%;
+  }
+
+/* Height */
+.h-1 {
+    height: 10%;
+  }
+.h-15 {
+    height: 15%;
+  }
+.h-2 {
+    height: 20%;
+  }
+.h-3 {
+    height: 30%;
+  }
+.h-4 {
+    height: 40%;
+  }
+.h-5 {
+    height: 50%;
+  }
+.h-6 {
+    height: 60%;
+  }
+.h-7 {
+    height: 70%;
+  }
+.h-8 {
+    height: 80%;
+  }
+.h-9 {
+    height: 90%;
+  }
+.h-10 {
+    height: 100%;
+  }
+
+
+
+/* Padding */
+
+.pd-1{
+    padding: 5px;
+  }
+.pd-2{
+    padding: 10px;
+  }
+.pd-3{
+    padding: 15px;
+  }
+.pd-4{
+    padding: 20px;
+  }
+.pd-5{
+    padding: 25px;
+  }
+.pd-6{
+    padding: 30px;
+  }     
+.pd-7{
+    padding: 35px;
+  }
+.pd-8{
+    padding: 40px;
+  }
+.pd-9{
+    padding: 45px;
+  }
+.pd-10{
+    padding: 50px;
+  }
+
+.pdr-1{
+    padding-right: 5px;
+  }
+.pdr-2{
+    padding-right: 10px;
+  }
+.pdr-3{
+    padding-right: 15px;
+  }
+.pdr-4{
+    padding-right: 20px;
+  }
+.pdr-5{
+    padding-right: 25px;
+  }
+.pdr-6{
+    padding-right: 30px;
+  }
+.pdr-7{
+    padding-right: 35px;
+  }
+.pdr-8{
+    padding-right: 40px;
+  }
+.pdr-9{
+    padding-right: 45px;
+  }
+.pdr-10{
+    padding-right: 50px;
+  }
+
+.pdl-1{
+    padding-left: 5px;
+  }
+.pdl-2{
+    padding-left: 10px;
+  }
+.pdl-3{
+    padding-left: 15px;
+  }
+.pdl-4{
+    padding-left: 20px;
+  }
+.pdl-5{
+    padding-left: 25px;
+  }
+.pdl-6{
+    padding-left: 30px;
+  }
+.pdl-7{
+    padding-left: 35px;
+  }
+.pdl-8{
+    padding-left: 40px;
+  }
+.pdl-9{
+    padding-left: 45px;
+  }
+.pdl-10{
+    padding-left: 50px;
+  }
+
+.pdt-1{
+    padding-top: 5px;
+  }
+.pdt-2{
+    padding-top: 10px;
+  }
+.pdt-3{
+    padding-top: 15px;
+  }
+.pdt-4{
+    padding-top: 20px;
+  }
+.pdt-5{
+    padding-top: 25px;
+  }
+.pdt-6{
+    padding-top: 30px;
+  }
+.pdt-7{
+    padding-top: 35px;
+  }
+.pdt-8{
+    padding-top: 40px;
+  }
+.pdt-9{
+    padding-top: 45px;
+  }
+.pdt-10{
+    padding-top: 50px;
+  }
+
+.pdb-1{
+    padding-bottom: 5px;
+  }
+.pdb-2{
+    padding-bottom: 10px;
+  }
+.pdb-3{
+    padding-bottom: 15px;
+  }
+.pdb-4{
+    padding-bottom: 20px;
+  }
+.pdb-5{
+    padding-bottom: 25px;
+  }
+.pdb-6{
+    padding-bottom: 30px;
+  }
+.pdb-7{
+    padding-bottom: 35px;
+  }
+.pdb-8{
+    padding-bottom: 40px;
+  }
+.pdb-9{
+    padding-bottom: 45px;
+  }
+.pdb-10{
+    padding-bottom: 50px;
+  }
+
+.flex{
+    display: flex;
+  }
+.flex-col{
+    flex-direction: column;
+  }
+.flex-row{
+    flex-direction: row;
+  }
+.flex-wrap{
+    flex-wrap: wrap;
+  }
+.flex-nowrap{
+    flex-wrap: nowrap;
+  }
+.flex-row-r{
+    flex-direction: row-reverse;
+  }
+.flex-col-r{
+    flex-direction: column-reverse;
+  }
+.flex-justify-start{
+    justify-content: flex-start;
+  }
+
+.mg-1{
+    margin: 5px;
+  }
+.mg-2{
+    margin: 10px;
+  }
+.mg-3{
+    margin: 15px;
+  }
+.mg-4{
+    margin: 20px;
+  }
+.mg-5{
+    margin: 25px;
+  }
+.mg-6{
+    margin: 30px;
+  }
+.mg-7{
+    margin: 35px;
+  }
+.mg-8{
+    margin: 40px;
+  }
+.mg-9{
+    margin: 45px;
+  }
+.mg-10{
+    margin: 50px;
+  }
+
+.mgr-1{
+    margin-right: 5px;
+  }
+.mgr-2{
+    margin-right: 10px;
+  }
+.mgr-3{
+    margin-right: 15px;
+  }
+.mgr-4{
+    margin-right: 20px;
+  }
+.mgr-5{
+    margin-right: 25px;
+  }
+.mgr-6{
+    margin-right: 30px;
+  }
+.mgr-7{
+    margin-right: 35px;
+  }
+.mgr-8{
+    margin-right: 40px;
+  }
+.mgr-9{
+    margin-right: 45px;
+  }
+.mgr-10{
+    margin-right: 50px;
+  }
+
+
+
+.comfortaa-light {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
