@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.loading-text {
+ position: absolute;
+  margin-top: 40vh;
+  text-align: center;
+  z-index: 2;
+  animation: flicker 1.5s infinite;
+  mix-blend-mode: difference;
+}
+
+.loading-text p {
+  margin: 0;
+  font-size: 3.5rem;
+  text-shadow: 2px 0 red, -2px 0 cyan;
+}
+
+.loading-percent {
+  font-size: 20rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  animation: glitch3D 0.8s infinite;
+  text-shadow: 2px 0 red, -2px 0 cyan;
+}
+
+.loading-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  transition: height 0.02s linear;
+  z-index: 1;
+  box-shadow: 0 0 10px #fff;
+}
+
+.loading-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    mix-blend-mode: difference;
+    letter-spacing: 1px;
+    font-family: monospace;
+    opacity: 0.8;
+    z-index: 5;
+  }
+
+.logo-crow{
+    margin: 5%;
+    mix-blend-mode: difference;
+    animation: flicker 1.5s infinite;
+}
+  
+
+/* Glitch 3D old-school */
+@keyframes glitch3D {
+  0% {
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+  20% {
+    text-shadow: -3px 1px cyan, 3px -1px red;
+  }
+  40% {
+    text-shadow: 2px -2px red, -2px 2px cyan;
+  }
+  60% {
+    text-shadow: -4px 0 red, 4px 0 cyan;
+  }
+  80% {
+    text-shadow: 1px 1px cyan, -1px -1px red;
+  }
+  100% {
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+}
+
+/* Flicker effect for text */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+  }
+}

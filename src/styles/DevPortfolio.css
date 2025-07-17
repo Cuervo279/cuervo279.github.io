@@ -1,76 +1,71 @@
 /* DevPortfolio.css */
+html{
+  scroll-behavior: smooth;
+}
 
 body{
-    background-color: var(--portfolio-elements-item-backgroundDefault);
-    color: var(--portfolio-elements-textPrimary);
-    padding-bottom: 60px;
-    /* background-size: 40px 40px;
-    background-image:
-    linear-gradient(to right, #333333 1px, rgba(255,255,255,0) 1px),
-    linear-gradient(to bottom, #333333 1px, rgba(255, 213, 0, 0) 1px);
-    transition-duration: 0.3s;
-     */
+  background-color: var(--portfolio-elements-item-backgroundDefault);
+  color: var(--portfolio-elements-textPrimary);
+  padding-bottom: 60px;
 }
 
 .logo{
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
-
-
-  
 
 .todays-date {
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    background-color: var(--portfolio-elements-item-backgroundDefault);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    height: 25px;
-    padding: 5px;
-    z-index: 1000;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--portfolio-elements-item-backgroundDefault);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 25px;
+  padding: 5px;
+  z-index: 1000;
 }
 
-
 .dev-portfolio-header {
-    justify-content: space-between;
-
-    padding: 0 1rem;
-  }
+  justify-content: space-between;
+  padding: 0 1rem;
+}
 
 .navbar-logo-container a{
-    margin: 5px;
-    text-decoration: none;
-    color: var(--portfolio-elements-textPrimary);
+  margin: 5px;
+  text-decoration: none;
+  color: var(--portfolio-elements-textPrimary);
 }
 
 .navbar-logo-container a:hover{
-    color: var(--portfolio-elements-textTertiary);
-    transition: color 0.3s ease;
+  color: var(--portfolio-elements-textTertiary);
+  transition: color 0.3s ease;
 }
 
 .navbar-social-icons-container a{
-    margin: 5px;
-    text-decoration: none;
-    color: var(--portfolio-elements-textPrimary);
+  margin: 5px;
+  text-decoration: none;
+  color: var(--portfolio-elements-textPrimary);
 }
 
 .navbar-social-icons-container a:hover{
-    color: var(--portfolio-elements-textTertiary);
-    transition: color 0.3s ease;
+  color: var(--portfolio-elements-textTertiary);
+  transition: color 0.3s ease;
 }
 
 .navbar-social-icons-container div{
-    margin: 5px;
-    text-decoration: none;
-    color: var(--portfolio-elements-textPrimary);
+  margin: 5px;
+  text-decoration: none;
+  color: var(--portfolio-elements-textPrimary);
 }
 
+.welcome-container{
+  display:  relative;
+  height: 40vh;
+  color: var(--portfolio-elements-textPrimary);
+}
 
 .main-wrapper{
   display: flex;
@@ -84,8 +79,8 @@ body{
   align-items: stretch;
   gap: 10px;
   width: 90%;
-  height: 75vh;
-  margin: 15px;
+  height: 40vh;
+  margin-top: 50px;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -131,44 +126,111 @@ body{
   transition: scale 0.5s ease;
 } 
   
-
-
 .pixel-element:hover p {
   opacity: 1;
   transition: opacity 0.3s ease;
   
 }
     
-
 .footer-container{
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    z-index: 1000;
-    background-color: var(--portfolio-elements-item-backgroundDefaultTransparent);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    color: var(--portfolio-elements-textPrimary);
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 10px;
-    justify-content: center;
-    align-items: center;  
-    overflow: hidden;
-    height: 60px;
-  
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  z-index: 1000;
+  background-color: var(--portfolio-elements-item-backgroundDefaultTransparent);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;  
+  overflow: hidden;
+  height: 60px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: var(--portfolio-elements-textPrimary);
+}
+
+.footer-container a:hover {
+  color: var(--portfolio-elements-textTertiary);
+  transition: color 0.3s ease;
 }
 
 .footer-progress-bar {
-    background: var(--grey); /* ou uma cor de destaque */
-    z-index: -1;
-    width: 0%;
-    height: 100%;
-    transition: width 50ms linear;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
+  background: var(--grey);
+  z-index: -1;
+  width: 0%;
+  height: 100%;
+  transition: width 50ms linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.glitch {
+  color: white;
+  font-size: 50px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim {
+  0% { clip: rect(12px, 9999px, 45px, 0); }
+  10% { clip: rect(85px, 9999px, 20px, 0); }
+  20% { clip: rect(0px, 9999px, 65px, 0); }
+  30% { clip: rect(25px, 9999px, 90px, 0); }
+  40% { clip: rect(67px, 9999px, 32px, 0); }
+  50% { clip: rect(48px, 9999px, 10px, 0); }
+  60% { clip: rect(3px, 9999px, 80px, 0); }
+  70% { clip: rect(42px, 9999px, 50px, 0); }
+  80% { clip: rect(95px, 9999px, 22px, 0); }
+  90% { clip: rect(12px, 9999px, 75px, 0); }
+  100% { clip: rect(50px, 9999px, 40px, 0); }
+}
+
+@keyframes noise-anim-2 {
+  0% { clip: rect(5px, 9999px, 60px, 0); }
+  10% { clip: rect(25px, 9999px, 30px, 0); }
+  20% { clip: rect(70px, 9999px, 20px, 0); }
+  30% { clip: rect(45px, 9999px, 75px, 0); }
+  40% { clip: rect(90px, 9999px, 15px, 0); }
+  50% { clip: rect(30px, 9999px, 90px, 0); }
+  60% { clip: rect(60px, 9999px, 10px, 0); }
+  70% { clip: rect(35px, 9999px, 55px, 0); }
+  80% { clip: rect(10px, 9999px, 95px, 0); }
+  90% { clip: rect(50px, 9999px, 40px, 0); }
+  100% { clip: rect(0px, 9999px, 100px, 0); }
+}
