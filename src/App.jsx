@@ -38,44 +38,48 @@ import Loading from '../src/components/transitions/Loading';
 import './styles/Main.css';
 
 const App = () => {
-  const [initialSweep, setInitialSweep] = useState(true);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [sweep, setSweep] = useState(false);
+  const [transitionComplete, setTransitionComplete] = useState(false);
 
-  // Quando o sweep termina, ativa o loading
-  const handleSweepComplete = () => {
-    setInitialSweep(false);
-    setLoading(true);
-
-    // Simula o carregamento, pode ser o fetch de dados ou delay
-    setTimeout(() => {
+  // Fase 1: Loading inicial
+  useEffect(() => {
+    const loadingTimeout = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+      setSweep(true); // Inicia sweep depois do loading
+    }, 2000); // 2 segundos de loading
+
+    return () => clearTimeout(loadingTimeout);
+  }, []);
+
+  // Fase 2: Sweep em andamento
+  const handleSweepComplete = () => {
+    setSweep(false);
+    setTransitionComplete(true);
   };
 
-  
-  // Enquanto estiver no sweep, mostra o SweepTransition
-  if (initialSweep) {
+  // Fase 1
+  if (loading) return <Loading />;
+
+  // Fase 2
+  if (sweep) {
     return (
-      
-      <SweepTransition active={true} onComplete={handleSweepComplete}>
-        {/* Pode deixar vazio, ou um conteúdo de loading mínimo */}
-      </SweepTransition>
+      <SweepTransition active={true} onComplete={handleSweepComplete} />
     );
   }
 
-  // Se estiver carregando após o sweep, mostra o loading cyberpunk
-  if (loading) {
-    return <Loading />;
+  // Fase 3: Conteúdo principal
+  if (transitionComplete) {
+    return (
+      <Routes>
+        <Route path="/" element={<Navigate to="/dev" replace />} />
+        <Route path="/dev" element={<DevPortfolio />} />
+        <Route path="/design" element={<DesignPortfolio />} />
+      </Routes>
+    );
   }
 
-  // Depois de tudo, mostra as rotas
-  return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/dev" replace />} />
-      <Route path="/dev" element={<DevPortfolio />} />
-      <Route path="/design" element={<DesignPortfolio />} />
-    </Routes>
-  );
+  return null; // Evita retornar nada durante transições indeterminadas
 };
 
 export default App;
