@@ -9,12 +9,18 @@ import { GithubOutlined,
     SunFilled,
   } from '@ant-design/icons';
 
-  
+import useTranslation from '../../hooks/useTranslation';
 
 import "./CircularGallery.css";
 
 import confiancaImg from '../../assets/img/confianca.png';
+import maiacallcenterImg from '../../assets/img/maiacallcenter.png';
+import graficdesignImg from '../../assets/img/graficdesign.png';
+import citycomputerImg from '../../assets/img/citycomputer.png';
+
 import confiancaLogo from '../../assets/logo/confianca-logo.svg';
+import citycomputerLogo from '../../assets/logo/citycomputer-logo.png';
+
 
 function debounce(func, wait) {
   let timeout;
@@ -428,9 +434,10 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { titleTop: 'Outubro/2024', image: confiancaImg, icon: confiancaLogo, text: 'Confiança Supermercados', workPositionText:'Estagiário' },
-      { date: ``, image: `https://picsum.photos/seed/21/800/600?grayscale`, text: "Coastline" },
-      { date: ``, image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" },
+      { titleTop: 'October/2024 - Current' , image: confiancaImg, icon: confiancaLogo, text: 'Confiança Supermercados', workPositionText:'Internship' },
+      { titleTop: 'January/2019 - Present' , image: graficdesignImg , icon: '', text: 'Graphic Designer', workPositionText:'Freelancer' },
+      { titleTop: 'Setember/2012 - April/2013' , image: citycomputerImg, icon: citycomputerLogo, text: 'City Computer', workPositionText:'Freelance' },
+      { titleTop: 'December/2010 - July/2012' , image: maiacallcenterImg, icon: '', text: 'Maia Call Center', workPositionText:'Internship' },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

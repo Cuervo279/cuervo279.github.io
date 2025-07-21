@@ -309,22 +309,22 @@ const DevPortfolio = () => {
           </section>
 
           <section ref={skillRef} id="skill">
-            <h2 className='experience-title'>{translations[Localization].experience}</h2>
-            <p className='experience-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2 className='experience-title'>{translations[Localization].skill}</h2>
+            <p className='experience-description'>In developement. // Em desenvolvimento.</p>
             <ul className='experience-list'>
               <li className='experience-item'>
-                <h3 className='experience-item-title'>Software Engineer at XYZ Company</h3>
+                <h3 className='experience-item-title'></h3>
               </li>
             </ul>
           </section>
           
           <section ref={projectRef} id="project">
 
-          <h2 className='experience-title'>{translations[Localization].experience}</h2>
-          <p className='experience-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h2 className='experience-title'>{translations[Localization].project}</h2>
+          <p className='experience-description'>In developement. // Em desenvolvimento.</p>
           <ul className='experience-list'>
             <li className='experience-item'>
-              <h3 className='experience-item-title'>Software Engineer at XYZ Company</h3>
+              <h3 className='experience-item-title'></h3>
             </li>
           </ul>
           </section>
